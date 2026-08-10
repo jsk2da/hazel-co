@@ -407,11 +407,10 @@
       line-height: 1.7;
     }
 
-    .contact-note-box {
-      display: inline-block;
+    .fallback-phone-note {
       margin-top: 16px;
-      padding: 12px 20px;
-      border: 1px solid var(--gold-lt);
+      padding-top: 16px;
+      border-top: 1px solid var(--gold-lt);
       font-size: 13px;
       color: var(--muted);
       line-height: 1.6;
@@ -749,9 +748,6 @@
           날짜와 서비스를 선택해주세요.<br>
           전체 주소는 예약 확인 이메일 또는 문자로 안내드려요.
         </p>
-        <div class="contact-note-box reveal d2">
-          문자가 편해요 (미용 중엔 전화를 못 받아요): 226-345-1688
-        </div>
       </div>
 
       <!-- Square widget wrapper (Story 4.1, AR4, NFR14) -->
@@ -771,6 +767,9 @@
           >
             @hazel.co.ca 로 DM 보내기 →
           </a>
+          <p class="fallback-phone-note">
+            문자가 편해요 (미용 중엔 전화를 못 받아요): 226-345-1688
+          </p>
         </div>
 
         <!-- Square Appointments embed (Story 4.1, AR3) -->
