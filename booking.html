@@ -407,6 +407,12 @@
       line-height: 1.7;
     }
 
+    .fallback-phone-note a {
+      color: var(--purple);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-lt);
+    }
+
     .fallback-phone-note {
       margin-top: 16px;
       padding-top: 16px;
@@ -768,7 +774,8 @@
             @hazel.co.ca 로 DM 보내기 →
           </a>
           <p class="fallback-phone-note">
-            문자가 편해요 (미용 중엔 전화를 못 받아요): 226-345-1688
+            문자가 편해요 (미용 중엔 전화를 못 받아요):
+            <a href="sms:+12263451688" aria-label="226-345-1688로 문자 보내기">226-345-1688</a>
           </p>
         </div>
 
