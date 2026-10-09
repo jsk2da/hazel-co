@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hazel & Co. — 강아지 그루밍 · 내추럴 케어</title>
-  <meta name="description" content="유럽 그루머 자격증 보유 · 가위컷 전문 · 1:1 프라이빗 케어. 강아지가 편안해야 미용도 잘 돼요.">
+  <title>Hazel & Co. — Dog Grooming · Natural Care</title>
+  <meta name="description" content="European-certified groomer · Scissor-cut specialist · Private 1:1 care. A calm dog makes for a good groom.">
   <meta property="og:title" content="Hazel & Co.">
-  <meta property="og:description" content="유럽 그루머 자격증 보유 · 가위컷 전문 · 1:1 프라이빗 케어">
+  <meta property="og:description" content="European-certified groomer · Scissor-cut specialist · Private 1:1 care">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -28,13 +27,12 @@
     html, body { background: var(--bg); }
 
     body {
-      font-family: 'Pretendard', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       font-weight: 300;
       color: var(--text);
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── 전체 컨테이너 — 폰 너비 기준 ── */
     .page {
       max-width: 390px;
       margin: 0 auto;
@@ -42,9 +40,6 @@
       min-height: 100dvh;
     }
 
-    /* ══════════════════════════════
-       1. HERO PHOTO — square crop
-    ══════════════════════════════ */
     .hero {
       position: relative;
       width: 100%;
@@ -60,7 +55,6 @@
       display: block;
     }
 
-    /* 하단 그라디언트 — 텍스트 가독성 */
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -71,7 +65,6 @@
       );
     }
 
-    /* 이름 + 태그라인 — 사진 하단 중앙 */
     .hero-copy {
       position: absolute;
       bottom: 0;
@@ -102,9 +95,6 @@
       color: rgba(255,255,255,.72);
     }
 
-    /* ══════════════════════════════
-       2. BOOKING NOTE + SOCIAL — 카키 배경
-    ══════════════════════════════ */
     .social-section {
       background: #8B8B65;
       padding: 16px 24px 18px;
@@ -123,9 +113,6 @@
       color: #fff;
     }
 
-    /* ══════════════════════════════
-       3. FOLLOW ON SOCIALS
-    ══════════════════════════════ */
     .social {
       display: flex;
       flex-direction: row;
@@ -155,9 +142,6 @@
     }
     .social-icons a:hover { color: #fff; }
 
-    /* ══════════════════════════════
-       4. DIVIDER — "TAKE A LOOK AROUND"
-    ══════════════════════════════ */
     .section-divider {
       text-align: center;
       padding: 28px 24px 20px;
@@ -172,9 +156,6 @@
       color: var(--text);
     }
 
-    /* ══════════════════════════════
-       5. LINK BUTTONS — 밝은 크림 배경
-    ══════════════════════════════ */
     .links {
       background: var(--bg);
       padding: 20px 24px;
@@ -214,9 +195,6 @@
       color: var(--gold);
     }
 
-    /* ══════════════════════════════
-       6. FOOTER
-    ══════════════════════════════ */
     .footer {
       padding: 36px 24px 28px;
       text-align: center;
@@ -225,6 +203,17 @@
       text-transform: uppercase;
       color: var(--subtle);
     }
+
+    .lang-switch {
+      display: table;
+      margin: 14px auto 0;
+      padding: 6px 12px;
+      border: 1px solid var(--gold-lt);
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: .08em;
+    }
+    .lang-switch:hover { border-color: var(--purple); color: var(--purple); }
   </style>
 </head>
 <body>
@@ -234,7 +223,7 @@
   <section class="hero">
     <img
       src="assets/images/hero-bio.jpg"
-      alt="두 마리의 푸들이 거품 목욕 중 — Hazel &amp; Co."
+      alt="Two poodles enjoying a bubble bath — Hazel &amp; Co."
       class="hero-img"
       width="800"
       height="800"
@@ -247,9 +236,9 @@
     </div>
   </section>
 
-  <!-- 2+3. BOOKING NOTE + SOCIAL — 카키 배경 -->
+  <!-- 2+3. BOOKING NOTE + SOCIAL -->
   <div class="social-section">
-    <p class="booking-note">예약 · 문의 받고 있어요</p>
+    <p class="booking-note">Now accepting bookings</p>
     <div class="social">
       <p class="social-label">Follow on Socials</p>
       <div class="social-icons">
@@ -264,31 +253,34 @@
 
   <!-- 4. DIVIDER -->
   <div class="section-divider">
-    <span>둘러보기</span>
+    <span>Take a look around</span>
   </div>
 
   <!-- 5. LINK BUTTONS -->
-  <nav class="links" aria-label="주요 링크">
+  <nav class="links" aria-label="Main links">
 
-    <a href="booking.html#philosophy" class="link-btn">
-      <span class="link-btn-name">예약 안내 보기</span>
+    <a href="booking-en.html#philosophy" class="link-btn">
+      <span class="link-btn-name">View Booking Info</span>
       <span class="link-btn-arr">→</span>
     </a>
 
     <a href="https://ig.me/m/hazelco_spa" class="link-btn" target="_blank" rel="noopener noreferrer">
-      <span class="link-btn-name">인스타그램 DM 문의</span>
+      <span class="link-btn-name">Message on Instagram</span>
       <span class="link-btn-arr">→</span>
     </a>
 
     <a href="https://www.instagram.com/hazelco_spa" class="link-btn" target="_blank" rel="noopener noreferrer">
-      <span class="link-btn-name">인스타그램 피드</span>
+      <span class="link-btn-name">Instagram Feed</span>
       <span class="link-btn-arr">→</span>
     </a>
 
   </nav>
 
   <!-- 6. FOOTER -->
-  <footer class="footer">© Hazel &amp; Co. · Windsor-Essex, ON</footer>
+  <footer class="footer">
+    © Hazel &amp; Co. · Windsor-Essex, ON
+    <a href="index-ko.html" class="lang-switch" lang="ko">한국어</a>
+  </footer>
 
 </div>
 </body>
