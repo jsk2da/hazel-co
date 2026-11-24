@@ -238,33 +238,76 @@
     .lang-switch:hover { border-color: var(--purple); color: var(--purple); }
 
     /* HOLIDAY 2026 */
-    .holiday { padding: 26px 24px 6px; }
-    .holiday-card {
-      border: 1px solid var(--gold-lt);
-      background: #FDFAF5;
-      padding: 22px 20px 20px;
-      margin-bottom: 12px;
-    }
-    .holiday-eyebrow {
-      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 6px;
-    }
-    .holiday-title {
-      font-family: 'Cormorant Garamond', serif; font-style: italic;
-      font-size: 28px; font-weight: 400; line-height: 1.1; margin-bottom: 10px;
-    }
-    .holiday-list { list-style: none; font-size: 13px; line-height: 1.75; color: var(--muted); }
-    .holiday-list li::before { content: "— "; color: var(--gold); }
-    .holiday-price {
-      margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--gold-lt);
-      font-size: 13px; color: var(--text);
-    }
-    .holiday-price small { display: block; font-size: 11px; color: var(--subtle); margin-top: 3px; }
-    .holiday-cta {
-      display: block; text-align: center; margin-top: 4px; padding: 14px;
-      background: var(--purple); color: #fff; text-decoration: none;
-      font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
-    }
+    .hol { --pine:#2E4436; --berry:#8A2F2F; background:var(--bg); }
+    .hol-hero { position:relative; aspect-ratio:9/11; overflow:hidden; }
+    .hol-hero img { width:100%; height:100%; object-fit:cover; display:block; }
+    .hol-hero::after { content:""; position:absolute; inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(20,28,22,.72) 100%); }
+    .hol-hero-copy { position:absolute; left:0; right:0; bottom:0; z-index:1; padding:0 26px 28px; color:#fff; }
+    .hol-kicker { font-size:10px; letter-spacing:.24em; text-transform:uppercase; opacity:.85; }
+    .hol-name { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+      font-size:52px; line-height:.95; margin:8px 0 10px; }
+    .hol-lede { font-size:13px; line-height:1.6; opacity:.92; max-width:300px; }
+    .hol-cap { position:absolute; top:14px; right:16px; z-index:1; font-size:9px; letter-spacing:.14em;
+      text-transform:uppercase; color:#fff; opacity:.8; }
+
+    .hol-body { padding:30px 24px 8px; }
+    .hol-h { font-family:'Cormorant Garamond',serif; font-size:13px; letter-spacing:.24em;
+      text-transform:uppercase; color:var(--pine); text-align:center; margin-bottom:18px; }
+    .hol-h::before, .hol-h::after { content:""; display:inline-block; width:28px; height:1px;
+      background:var(--gold); vertical-align:middle; margin:0 10px; }
+
+    .hol-items { list-style:none; border-top:1px solid var(--gold-lt); }
+    .hol-items li { display:flex; gap:16px; padding:13px 2px; border-bottom:1px solid var(--gold-lt); }
+    .hol-items .n { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px;
+      color:var(--gold); width:24px; flex:none; line-height:1.1; }
+    .hol-items b { display:block; font-weight:400; font-size:14px; color:var(--text); }
+    .hol-items span { display:block; font-size:12px; color:var(--muted); line-height:1.55; margin-top:2px; }
+
+    .hol-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin:26px 0 8px; }
+    .hol-strip img { width:100%; aspect-ratio:25/32; object-fit:cover; display:block; }
+    .hol-strip-cap { font-size:11px; color:var(--subtle); text-align:center; font-style:italic;
+      font-family:'Cormorant Garamond',serif; font-size:14px; }
+
+    .hol-prices { margin-top:30px; background:#FDFAF5; border:1px solid var(--gold-lt); padding:20px 18px 16px; }
+    .hol-prices table { width:100%; border-collapse:collapse; font-size:13px; }
+    .hol-prices th { font-weight:400; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--subtle); text-align:right; padding:0 0 8px; }
+    .hol-prices th:first-child { text-align:left; }
+    .hol-prices td { padding:9px 0; border-top:1px solid #EEE5D9; text-align:right; color:var(--text); }
+    .hol-prices td:first-child { text-align:left; color:var(--muted); }
+    .hol-prices td small { display:block; font-size:10.5px; color:var(--subtle); }
+    .hol-note { font-size:11.5px; color:var(--muted); line-height:1.6; margin-top:12px; }
+
+    .hol-gift { margin-top:34px; background:var(--pine); color:#F4EEE3; padding:28px 22px 24px; }
+    .hol-gift .hol-h { color:#E9DCC4; }
+    .hol-cert { background:#FAF6EF; color:#5B3E2C; border:1px solid #5B3E2C; padding:4px; margin:4px 0 20px;
+      transform:rotate(-1.2deg); box-shadow:0 10px 24px rgba(0,0,0,.25); }
+    .hol-cert-in { border:.6px solid #5B3E2C; padding:16px 18px 12px; }
+    .hol-cert-top { display:flex; justify-content:space-between; align-items:baseline;
+      font-family:'Cormorant Garamond',serif; font-size:18px; }
+    .hol-cert-top small { font-family:'Inter',sans-serif; font-size:9px; letter-spacing:.1em; }
+    .hol-cert-mid { text-align:center; font-family:'Cormorant Garamond',serif; margin:8px 0 6px; }
+    .hol-cert-mid i { font-size:15px; }
+    .hol-cert-mid div { font-size:44px; line-height:1; }
+    .hol-cert-foot { border-top:.6px solid #5B3E2C; padding-top:5px; font-size:8.5px; letter-spacing:.04em; text-align:center; }
+    .hol-gift ul { list-style:none; font-size:13px; line-height:1.6; }
+    .hol-gift li { padding:9px 0; border-bottom:1px solid rgba(233,220,196,.22); }
+    .hol-gift li:last-child { border-bottom:0; }
+    .hol-gift li b { font-weight:400; color:#fff; }
+    .hol-bonus { display:inline-block; margin-top:2px; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+      border:1px solid #C9A877; color:#E9D2A6; padding:3px 8px; }
+
+    .hol-steps { margin-top:34px; counter-reset:s; }
+    .hol-steps div { display:flex; gap:14px; align-items:flex-start; padding:10px 0; font-size:13px; color:var(--muted); line-height:1.55; }
+    .hol-steps div::before { counter-increment:s; content:counter(s); flex:none; width:26px; height:26px; border-radius:50%;
+      border:1px solid var(--gold); color:var(--gold); font-family:'Cormorant Garamond',serif; font-size:15px;
+      display:flex; align-items:center; justify-content:center; }
+    .hol-steps b { color:var(--text); font-weight:400; }
+
+    .hol-cta { display:block; text-align:center; margin:22px 0 6px; padding:16px; background:var(--purple);
+      color:#fff; text-decoration:none; font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+    .hol-cta-sub { text-align:center; font-size:11px; color:var(--subtle); margin-bottom:6px; }
   </style>
 </head>
 <body>
@@ -304,19 +347,62 @@
 
 
   <!-- HOLIDAY 2026 -->
-  <section class="holiday">
-    <div class="holiday-card">
-      <p class="holiday-eyebrow">12월 1일 – 24일</p>
-      <h2 class="holiday-title">Holiday Glow</h2>
-      <ul class="holiday-list"><li>풀 미용</li><li>프리미엄 컨디셔닝 케어</li><li>발바닥 보습 케어</li><li>홀리데이 반다나</li><li>완성 사진 촬영</li></ul>
-      <p class="holiday-price">풀 미용 가격 <b>+ $18</b><small>하루 2마리만 예약 받아요.</small></p>
+  <section class="hol" aria-label="Holiday 2026">
+    <div class="hol-hero">
+      <img src="assets/images/holiday-hero.jpg" alt="Jinny the Maltipoo in a holiday bandana under a Christmas tree" loading="lazy">
+      <span class="hol-cap">Jinny · 1살 · 말티푸</span>
+      <div class="hol-hero-copy">
+        <p class="hol-kicker">12월 1일 – 24일 · Holiday 2026</p>
+        <h2 class="hol-name">Holiday Glow</h2>
+        <p class="hol-lede">풀 미용에 케어를 조금 더하고, 반다나와 가족 앨범용 사진으로 마무리해요.</p>
+      </div>
     </div>
-    <div class="holiday-card">
-      <p class="holiday-eyebrow">12월 24일까지</p>
-      <h2 class="holiday-title" style="font-family:'Pretendard',sans-serif;font-style:normal;font-size:22px;font-weight:500">미용 상품권</h2>
-      <ul class="holiday-list"><li>$50 / $100 · 모든 미용에 사용 가능</li><li>유효기간 없음</li><li>$100 구매 시 <b>$20 보너스 쿠폰</b> 증정 (2027년 3월 31일까지 사용)</li><li>Interac e-Transfer 결제</li></ul>
+    <div class="hol-body">
+      <h3 class="hol-h">포함 내용</h3>
+      <ol class="hol-items">
+        <li><span class="n">01</span><div><b>풀 미용</b><span>목욕, 핸드 드라이, 발바닥·위생 정리, 귀 청소, 전체 커트 — 한 번에 한 마리만.</span></div></li>
+        <li><span class="n">02</span><div><b>프리미엄 컨디셔닝</b><span>털을 부드럽게 하고 겨울철 정전기를 줄여주는 집중 컨디셔닝.</span></div></li>
+        <li><span class="n">03</span><div><b>발바닥 보습 케어</b><span>발바닥 털 정리 후 핥아도 안전한 발밤으로 보습 — 겨울 염화칼슘·찬 바닥 대비.</span></div></li>
+        <li><span class="n">04</span><div><b>홀리데이 반다나</b><span>시즌 반다나를 하고 집에 가요.</span></div></li>
+        <li><span class="n">05</span><div><b>완성 사진</b><span>미용 후 홀리데이 사진을 찍어 휴대폰으로 보내드려요.</span></div></li>
+      </ol>
+      <div class="hol-strip">
+        <img src="assets/images/holiday-1.jpg" alt="Jinny by the tree" loading="lazy">
+        <img src="assets/images/holiday-2.jpg" alt="Jinny after grooming" loading="lazy">
+        <img src="assets/images/holiday-3.jpg" alt="Jinny smiling in her bandana" loading="lazy">
+      </div>
+      <p class="hol-strip-cap">Jinny, 홀리데이 미용 후</p>
+
+      <div class="hol-prices">
+        <h3 class="hol-h">Holiday Glow 가격</h3>
+        <table>
+          <tr><th>사이즈</th><th>직모</th><th>곱슬 / 이중모</th></tr>
+          <tr><td>Toy · 6lb 미만</td><td>$78<small>reg. $60</small></td><td>$88<small>reg. $70</small></td></tr>
+          <tr><td>XS · 6–12lb</td><td>$86<small>reg. $68</small></td><td>$97<small>reg. $79</small></td></tr>
+          <tr><td>S · 12–18lb</td><td>$94<small>reg. $76</small></td><td>$106<small>reg. $88</small></td></tr>
+          <tr><td>SM · 18–25lb</td><td>$103<small>reg. $85</small></td><td>$116<small>reg. $98</small></td></tr>
+          <tr><td>M · 25–40lb</td><td>$113<small>reg. $95</small></td><td>$128<small>reg. $110</small></td></tr>
+        </table>
+        <p class="hol-note">기존 풀 미용 가격 + $18. Bath &amp; Brush 고객도 +$18로 홀리데이 마무리를 추가할 수 있어요. 최종 가격은 털 상태에 따라 달라질 수 있어요. 하루 2마리만 받기 때문에 12월 날짜가 빨리 차요.</p>
+      </div>
     </div>
-    <a href="sms:+12263451688" class="holiday-cta">문자로 예약 · 구매 · (226) 345-1688</a>
+
+    <div class="hol-gift">
+      <h3 class="hol-h">미용 상품권</h3>
+      <div class="hol-cert"><div class="hol-cert-in">
+        <div class="hol-cert-top">Hazel &amp; Co.<small>No. HZ-001</small></div>
+        <div class="hol-cert-mid"><i>Gift Certificate</i><div>$100</div></div>
+        <div class="hol-cert-foot">No expiry · any grooming service</div>
+      </div></div>
+      <ul><li><b>$50 / $100</b> · 모든 미용에 사용 가능</li><li>상품권 <b>유효기간 없음</b></li><li>$100 구매 시 <b>$20 보너스 쿠폰</b> 증정<br><span class="hol-bonus">12/24까지 · 보너스는 2027.3.31까지 사용</span></li><li><b>Interac e-Transfer</b> 결제 · 실물 또는 휴대폰으로 전달</li></ul>
+    </div>
+
+    <div class="hol-body">
+      <h3 class="hol-h">예약 방법</h3>
+      <div class="hol-steps"><div><p>강아지 <b>이름·견종·몸무게</b>를 (226) 345-1688로 <b>문자</b>해 주세요.</p></div><div><p><b>날짜 선택</b> — 오전 또는 이른 오후, 매일 가능해요.</p></div><div><p><b>확정</b>되면 하루 전에 안내 문자를 드려요.</p></div></div>
+      <a href="sms:+12263451688" class="hol-cta">문자로 예약 · 구매 · (226) 345-1688</a>
+      <p class="hol-cta-sub">인스타그램 DM도 가능해요 · @hazelco_spa</p>
+    </div>
   </section>
 
   <!-- 4. DIVIDER -->
