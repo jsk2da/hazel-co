@@ -214,6 +214,35 @@
       letter-spacing: .08em;
     }
     .lang-switch:hover { border-color: var(--purple); color: var(--purple); }
+
+    /* HOLIDAY 2026 */
+    .holiday { padding: 26px 24px 6px; }
+    .holiday-card {
+      border: 1px solid var(--gold-lt);
+      background: #FDFAF5;
+      padding: 22px 20px 20px;
+      margin-bottom: 12px;
+    }
+    .holiday-eyebrow {
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px;
+    }
+    .holiday-title {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 28px; font-weight: 400; line-height: 1.1; margin-bottom: 10px;
+    }
+    .holiday-list { list-style: none; font-size: 13px; line-height: 1.75; color: var(--muted); }
+    .holiday-list li::before { content: "— "; color: var(--gold); }
+    .holiday-price {
+      margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--gold-lt);
+      font-size: 13px; color: var(--text);
+    }
+    .holiday-price small { display: block; font-size: 11px; color: var(--subtle); margin-top: 3px; }
+    .holiday-cta {
+      display: block; text-align: center; margin-top: 4px; padding: 14px;
+      background: var(--purple); color: #fff; text-decoration: none;
+      font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
@@ -250,6 +279,23 @@
       </div>
     </div>
   </div>
+
+
+  <!-- HOLIDAY 2026 -->
+  <section class="holiday">
+    <div class="holiday-card">
+      <p class="holiday-eyebrow">December 1 – 24</p>
+      <h2 class="holiday-title">Holiday Glow</h2>
+      <ul class="holiday-list"><li>Full groom</li><li>Premium conditioning treatment</li><li>Paw balm moisturizing care</li><li>Holiday bandana</li><li>A finished photo of your pup</li></ul>
+      <p class="holiday-price">Your full-groom price <b>+ $18</b><small>Limited to 2 dogs a day.</small></p>
+    </div>
+    <div class="holiday-card">
+      <p class="holiday-eyebrow">Until December 24</p>
+      <h2 class="holiday-title">Gift Certificates</h2>
+      <ul class="holiday-list"><li>$50 or $100, good toward any grooming</li><li>No expiry date</li><li>Buy $100 → get a <b>$20 bonus coupon</b> free (use by March 31, 2027)</li><li>Pay by Interac e-Transfer</li></ul>
+    </div>
+    <a href="sms:+12263451688" class="holiday-cta">Text to book or buy · (226) 345-1688</a>
+  </section>
 
   <!-- 4. DIVIDER -->
   <div class="section-divider">

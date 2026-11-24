@@ -236,6 +236,35 @@
       letter-spacing: .08em;
     }
     .lang-switch:hover { border-color: var(--purple); color: var(--purple); }
+
+    /* HOLIDAY 2026 */
+    .holiday { padding: 26px 24px 6px; }
+    .holiday-card {
+      border: 1px solid var(--gold-lt);
+      background: #FDFAF5;
+      padding: 22px 20px 20px;
+      margin-bottom: 12px;
+    }
+    .holiday-eyebrow {
+      font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px;
+    }
+    .holiday-title {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 28px; font-weight: 400; line-height: 1.1; margin-bottom: 10px;
+    }
+    .holiday-list { list-style: none; font-size: 13px; line-height: 1.75; color: var(--muted); }
+    .holiday-list li::before { content: "— "; color: var(--gold); }
+    .holiday-price {
+      margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--gold-lt);
+      font-size: 13px; color: var(--text);
+    }
+    .holiday-price small { display: block; font-size: 11px; color: var(--subtle); margin-top: 3px; }
+    .holiday-cta {
+      display: block; text-align: center; margin-top: 4px; padding: 14px;
+      background: var(--purple); color: #fff; text-decoration: none;
+      font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
@@ -272,6 +301,23 @@
       </div>
     </div>
   </div>
+
+
+  <!-- HOLIDAY 2026 -->
+  <section class="holiday">
+    <div class="holiday-card">
+      <p class="holiday-eyebrow">12월 1일 – 24일</p>
+      <h2 class="holiday-title">Holiday Glow</h2>
+      <ul class="holiday-list"><li>풀 미용</li><li>프리미엄 컨디셔닝 케어</li><li>발바닥 보습 케어</li><li>홀리데이 반다나</li><li>완성 사진 촬영</li></ul>
+      <p class="holiday-price">풀 미용 가격 <b>+ $18</b><small>하루 2마리만 예약 받아요.</small></p>
+    </div>
+    <div class="holiday-card">
+      <p class="holiday-eyebrow">12월 24일까지</p>
+      <h2 class="holiday-title" style="font-family:'Pretendard',sans-serif;font-style:normal;font-size:22px;font-weight:500">미용 상품권</h2>
+      <ul class="holiday-list"><li>$50 / $100 · 모든 미용에 사용 가능</li><li>유효기간 없음</li><li>$100 구매 시 <b>$20 보너스 쿠폰</b> 증정 (2027년 3월 31일까지 사용)</li><li>Interac e-Transfer 결제</li></ul>
+    </div>
+    <a href="sms:+12263451688" class="holiday-cta">문자로 예약 · 구매 · (226) 345-1688</a>
+  </section>
 
   <!-- 4. DIVIDER -->
   <div class="section-divider">
